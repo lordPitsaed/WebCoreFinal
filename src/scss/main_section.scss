@@ -1,0 +1,16 @@
+.main_section {
+  padding-top: 24px;
+  min-width: 320px;
+}
+
+.main_section__header {
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: bold;
+  background: url('../img/main/main_header/highlight.svg') no-repeat;
+  padding-left: 16px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  letter-spacing: -0.6px;
+  display: inline-block;
+}

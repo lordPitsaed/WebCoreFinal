@@ -1,0 +1,35 @@
+@import url(../fonts/fonts.css);
+// @import url(normalize.css);
+
+@import url(button.scss);
+@import url(aside.scss);
+@import url(brands.scss);
+@import url(content.scss);
+@import url(header.scss);
+@import url(main_section.scss);
+@import url(scroll-menu.scss);
+@import url(swiper.scss);
+
+:root {
+  --swiper-pagination-color: #b5b6bc;
+  --swiper-pagination-bullet-inactive-color: #ddd;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-theme-color: #000;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+html {
+  font-size: 14px;
+  min-width: 320px;
+}
+
+@media screen and (min-width: 1366px) {
+  body {
+    margin-left: 320px;
+    width: calc(100% - 320px);
+  }
+}
