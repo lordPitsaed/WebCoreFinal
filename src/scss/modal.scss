@@ -11,6 +11,10 @@
   box-sizing: border-box;
   transition: 0.2s all ease;
 
+  &--show {
+    right: 0;
+  }
+
   &__close_button {
     width: 40px;
     height: 40px;
@@ -96,6 +100,28 @@
   }
 }
 
-.modal--show {
-  right: 0;
+@media screen and (max-width: 320px) {
+  .modal {
+    width: 100%;
+    padding: 24px 16px;
+
+    &__heading {
+      margin-top: auto;
+      margin-left: -16px;
+      padding-left: 16px;
+      margin-top: 40px;
+    }
+
+    &__form__input {
+      width: 288px;
+    }
+
+    &__form__textarea {
+      width: 288px;
+    }
+
+    &__close_button {
+      left: 0;
+    }
+  }
 }
