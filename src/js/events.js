@@ -1,60 +1,61 @@
-let brandsShowMoreButton = document.querySelector(".brands__wrapper__button");
-let brandWrapper = document.querySelector(".brands__wrapper");
-let swiperMainElem = document.querySelector(".brands");
-let brandCards = document.querySelectorAll(".brand_card");
+let brandsShowMoreButton = document.querySelector('.brands__wrapper__button')
+let brandWrapper = document.querySelector('.brands__wrapper')
 
-let buttonOpenMenu = document.querySelector(".button_open_menu");
-let asideMenu = document.querySelector(".aside_menu");
-let buttonCloseMenu = document.querySelector(".button-close-aside");
+let buttonOpenMenu = document.querySelector('.button_open_menu')
+let asideMenu = document.querySelector('.aside_menu')
+let buttonCloseMenu = document.querySelector('.button-close-aside')
+let modalBlur = document.querySelector('.tablet-blur')
 
-brandsShowMoreButton.addEventListener("click", () => {
-  brandWrapper.classList.toggle("brands__wrapper--show_more");
-  if (brandWrapper.classList.contains("brands__wrapper--show_more")) {
-    brandsShowMoreButton.textContent = "Скрыть";
-    brandsShowMoreButton.classList.add("brands__wrapper__button--show-less");
+let buttonCloseFeedback = document.querySelector('.modal__close_button')
+let buttonOpenFeedback = document.querySelectorAll('.button_repair')
+let feedbackMenu = document.querySelector('.modal')
+
+brandsShowMoreButton.addEventListener('click', () => {
+  brandWrapper.classList.toggle('brands__wrapper--show_more')
+  if (brandWrapper.classList.contains('brands__wrapper--show_more')) {
+    brandsShowMoreButton.textContent = 'Скрыть'
+    brandsShowMoreButton.classList.add('brands__wrapper__button--show-less')
   } else {
-    brandsShowMoreButton.textContent = "Показать всё";
-    brandsShowMoreButton.classList.remove("brands__wrapper__button--show-less");
+    brandsShowMoreButton.textContent = 'Показать всё'
+    brandsShowMoreButton.classList.remove('brands__wrapper__button--show-less')
   }
-});
+})
 
-buttonOpenMenu.addEventListener("click", () => {
-  asideMenu.classList.toggle("aside_menu--show");
-});
+buttonOpenMenu.addEventListener('click', () => {
+  asideMenu.classList.toggle('aside_menu--show')
+  modalBlur.classList.toggle('tablet-blur--show')
+  document.body.style.overflow = 'hidden'
+})
 
-buttonCloseMenu.addEventListener("click", () => {
-  asideMenu.classList.toggle("aside_menu--show");
-});
+buttonCloseMenu.addEventListener('click', () => {
+  asideMenu.classList.toggle('aside_menu--show')
+  modalBlur.classList.toggle('tablet-blur--show')
+  document.body.style.overflow = 'auto'
+})
 
-function swiperDisable() {
-  // eslint-disable-next-line no-unused-vars, no-undef
-  let swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    slidesPerView: "auto",
-    centeredSlides: false,
-    spaceBetween: 0,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+buttonOpenFeedback.forEach(function (item) {
+  item.addEventListener('click', () => {
+    feedbackMenu.classList.toggle('modal--show')
+    modalBlur.classList.toggle('tablet-blur--show')
+    document.body.style.overflow = 'hidden'
+  })
+})
 
-  if (window.innerWidth <= 425) {
-    swiperMainElem.classList.add("swiper");
-    brandCards.forEach((element) => {
-      element.classList.add("swiper-slide");
-    });
-    brandWrapper.classList.add("swiper-wrapper");
-  } else {
-    swiperMainElem.classList.remove("swiper");
-    brandCards.forEach((element) => {
-      element.classList.remove("swiper-slide");
-    });
-    brandWrapper.classList.remove("swiper-wrapper");
+buttonCloseFeedback.addEventListener('click', () => {
+  feedbackMenu.classList.toggle('modal--show')
+  modalBlur.classList.toggle('tablet-blur--show')
+  document.body.style.overflow = 'auto'
+})
+
+document.addEventListener('click', (evt) => {
+  if (evt.target.classList.contains('tablet-blur')) {
+    if (asideMenu.classList.contains('aside_menu--show')) {
+      asideMenu.classList.toggle('aside_menu--show')
+    }
+    if (feedbackMenu.classList.contains('modal--show')) {
+      feedbackMenu.classList.toggle('modal--show')
+    }
+    document.body.style.overflow = 'auto'
+    modalBlur.classList.toggle('tablet-blur--show')
   }
-}
-swiperDisable();
-
-window.addEventListener("resize", () => {
-  swiperDisable();
-});
+})
