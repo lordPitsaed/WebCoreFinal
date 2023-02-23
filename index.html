@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+  <script defer="defer" src="./js/bundle.js"></script><link href="style.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <button class="header__button button--no-appearance button_open_menu button--hover">
+        <img src="./img/header/button_burger.svg" alt="Меню" class="button__icon">
+      </button>
+      <div class="header__divider--tablet"></div>
+      <img src="./img/header/logo.svg" alt="CPS логотип" class="header__image">
+      <button class="header__button--tablet button--no-appearance button--hover button_call">
+        <img src="./img/header/button_call.svg" alt="Позвонить оператору" class="button__icon--tablet">
+      </button>
+      <button class="header__button--tablet button--no-appearance button--hover button_chat">
+        <img src="./img/header/button_chat.svg" alt="Написать в чат" class="button__icon--tablet">
+      </button>
+      <button class="header__button--tablet button--no-appearance button--hover">
+        <img src="./img/header/button_profile.svg" alt="Перейти в профиль " class="button__icon--tablet">
+      </button>
+      <div class="header__divider"></div>
+      <button class="header__button button--no-appearance button--hover">
+        <img src="./img/header/button_repair.svg" alt="Оставить заявку" class="button__icon">
+      </button>
+      <button class="header__button button--no-appearance button--hover">
+        <img src="./img/header/button_checkstatus.svg" alt="Проверить статус ремонта" class="button__icon">
+      </button>
+    </header>
+
+    <aside class="aside_menu">
+      <section class="aside__header">
+        <button class="aside__header__button button-close-aside button--no-appearance button--hover"><img src="./img/aside/button_close.svg" alt="Закрыть" class="button__icon"></button>
+        <div class="aside__header__logo button--hover"><img src="./img/aside/logo.svg" alt="CPS логотип" class="header__image"></div>
+        <button class="aside__header__button button-search button--no-appearance button--hover"><img src="./img/aside/button_search.svg" alt="Поиск" class="button__icon"></button>
+      </section>
+      <nav class="aside__navigation">
+        <a href="#repair" class="aside__navigation__link aside-navigation__link--active">Ремонт техники</a>
+        <a href="#services" class="aside__navigation__link">Услуги и сервисы</a>
+        <a href="#corporate" class="aside__navigation__link">Корпоративным клиентам</a>
+        <a href="#retailers" class="aside__navigation__link">Продавцам техники</a>
+        <a href="#parthers" class="aside__navigation__link">Партнерам</a>
+        <a href="#manufacturers" class="aside__navigation__link">Производителям</a>
+        <a href="#service-centers" class="aside__navigation__link">Наши сервисные центры</a>
+        <a href="#contacts" class="aside__navigation__link">Контакты</a>
+      </nav>
+
+      <section class="aside__footer">
+        <div class="aside__buttons-wrapper">
+          <button class="aside__foter_button button--no-appearance button--hover button_call"><img src="./img/aside/button_call.svg" alt="Звонок" class="button__icon"></button>
+          <button class="aside__foter_button button--no-appearance button--hover button_chat"><img src="./img/aside/button_chat.svg" alt="Написать" class="button__icon"></button>
+          <button class="aside__foter_button button--no-appearance button--hover"><img src="./img/aside/button_profile.svg" alt="Профиль" class="button__icon"></button>
+        </div>
+        <a href="mailto:mail@cps.com" class="aside__footer__mail-link aside__footer__link">mail@cps.com</a>
+        <a href="tel:" class="aside__footer__phone-link aside__footer__link">8 800 890 89000</a>
+        <div class="lang-switcher">
+          <button class="lang-switcher__ru-button lang-switcher__button button--hover lang-switcher__button--active button--no-appearance">RU</button>
+          <button class="lang-switcher__en-button lang-switcher__button button--no-appearance button--hover">EN</button>
+          <button class="lang-switcher__ch-button lang-switcher__button button--no-appearance button--hover">CH</button>
+        </div>
+      </section>
+    </aside>
+
+    <div class="tablet-blur"></div>
+
+    <aside class="modal feedback">
+      <button class="modal__close_button close_feedback button--hover button--no-appearance">
+        <img src="./img/modal/close-button.svg" alt="Close">
+      </button>
+      <h2 class="modal__heading">Обратная связь</h2>
+      <form action="" class="modal__form">
+        <input type="text" class="modal__form__input" placeholder="Имя">
+        <input type="text" class="modal__form__input" placeholder="Телефон">
+        <input type="email" class="modal__form__input" placeholder="Электронная почта">
+        <textarea class="modal__form__textarea" placeholder="Сообщение"></textarea>
+        <p class="modal__form__disclaimer">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#personal-data" class="modal__form__disclaimer__link">обработку персональных данных</a>
+          и соглашаетесь с нашей
+          <a href="#personal-data" class="modal__form__disclaimer__link">политикой конфиденциальности</a>
+        </p>
+        <button class="modal__form__submit button--no-appearance button--hover" type="submit">
+          <p class="modal__form__submit__text">Отправить</p>
+          <img src="img/modal/form/button/submit.svg" alt="">
+        </button>
+      </form>
+    </aside>
+
+    <aside class="modal call">
+      <button class="modal__close_button close-call button--hover button--no-appearance">
+        <img src="./img/modal/close-button.svg" alt="Close">
+      </button>
+      <h2 class="modal__heading">Заказать звонок</h2>
+      <form action="" class="modal__form">
+        <input type="text" class="modal__form__input" placeholder="Телефон">
+        <p class="modal__form__disclaimer">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#personal-data" class="modal__form__disclaimer__link">обработку персональных данных</a>
+          и соглашаетесь с нашей
+          <a href="#personal-data" class="modal__form__disclaimer__link">политикой конфиденциальности</a>
+        </p>
+        <button class="modal__form__submit button--no-appearance button--hover" type="submit">
+          <p class="modal__form__submit__text">Отправить</p>
+          <img src="img/modal/form/button/submit.svg" alt="">
+        </button>
+      </form>
+    </aside>
+
+    <main class="main_section">
+      <div class="heading_wrapper">
+        <h1 class="main_section__header">Услуги и сервисы</h1>
+        <div class="buttons_wrapper">
+          <p class="buttons_wrapper__button_text">Оставить заявку</p>
+          <button class="buttons_wrapper__button--desktop button--no-appearance button--hover">
+            <img src="./img/header/button_repair.svg" alt="Оставить заявку" class="button__icon">
+          </button>
+          <p class="buttons_wrapper__button_text">Статус ремонта</p>
+          <button class="buttons_wrapper__button--desktop button--no-appearance button--hover">
+            <img src="./img/header/button_checkstatus.svg" alt="Проверить статус ремонта" class="button__icon">
+          </button>
+        </div>
+      </div>
+      <nav class="scroll_menu">
+        <button class="scroll_menu__button scroll_menu__button--active button--no-appearance button--hover">Ремонтируемые устройства</button>
+        <button class="scroll_menu__button button--no-appearance button--hover">Дополнительные услуги</button>
+        <button class="scroll_menu__button button--no-appearance button--hover">Ремонтируемые бренды</button>
+        <button class="scroll_menu__button button--no-appearance button--hover">Цены на услуги</button>
+        <button class="scroll_menu__button button--no-appearance button--hover">Адреса сервисных центров
+        </button>
+        <button class="scroll_menu__button button--no-appearance button--hover">Специальные цены</button>
+        <button class="scroll_menu__button button--no-appearance button--hover">Отзывы
+        </button>
+      </nav>
+      <section class="content">
+        <div class="content__wrapper">
+          <p class="content__text">
+            Мы являемся авторизованным сервисным центром по ремонту техники
+            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.<br>
+            <br>
+            Мы успешно работаем с 1992 года и заслужили репутацию надежного
+            партнера, что подтверждает большое количество постоянных клиентов.
+            Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+            очередь, советуют нас родным и близким.
+          </p>
+          <button class="content__button button--no-appearance button--hover">Читать далее</button>
+        </div>
+        <img class="content__image" src="./img/main/section/cps_picture.png" alt="Фото логотипа CPS">
+      </section>
+      <section class="brands swiper">
+        <p class="brands__header">Ремонт техники различных брендов</p>
+        <div class="brands__wrapper swiper-wrapper">
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/acer_logo.png" alt="Acer Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/apple_logo.png" alt=" Apple Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/bosch_logo.png" alt=" Bosch Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/hp_logo.png" alt=" HP Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/lenovo_logo.png" alt="Lenovo Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/samsung_logo.png" alt="Samsung Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/sony_logo.png" alt="Sony Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/viewsonic_logo.png" alt="ViewSonic Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/acer_logo.png" alt=" Acer Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/acer_logo.png" alt=" Acer Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+
+          <div class="brand_card swiper-slide">
+            <img src="./img/brands/acer_logo.png" alt=" Acer Logo" class="brand_card__logo">
+            <button class="brand_card__button button--hover button--no-appearance">
+              <img src="./img/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+            </button>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <button class="brands__wrapper__button button--no-appearance button--hover">
+          Показать всё
+        </button>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>
