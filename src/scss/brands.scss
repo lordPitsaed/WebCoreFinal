@@ -28,6 +28,7 @@
   letter-spacing: -0.2px;
   background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
   margin-bottom: 24px;
+  border-top: 1px solid #d9fff5;
 }
 
 .brands__wrapper__button {
@@ -53,18 +54,19 @@
 }
 
 .brands__wrapper__button--show-less::before {
-  display: inline-block;
-  content: '';
-  background-image: url(../img/main/section/read_more_icon.svg);
-  height: 24px;
-  width: 24px;
-  margin-right: 8px;
   transform: rotate(180deg);
 }
 
 @media screen and (max-width: 425px) {
   .brand_card {
     margin-left: 16px;
+  }
+  .brands__wrapper__button {
+    display: none;
+  }
+  .brands__header {
+    height: 80px;
+    margin-bottom: 16px;
   }
 }
 
@@ -77,6 +79,7 @@
     transition: max-height 0.2s ease;
     margin: auto;
     max-width: 1120px;
+    justify-content: center;
   }
 
   .brands__wrapper--show_more {
