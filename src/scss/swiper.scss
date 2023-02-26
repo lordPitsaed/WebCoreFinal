@@ -7,7 +7,7 @@
     content: '';
     display: inline-block;
     width: 24px;
-    height: 81px;
+    height: calc(100% - 110px);
     background: linear-gradient(
       270deg,
       #f8f8f8 16.84%,

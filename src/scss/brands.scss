@@ -79,7 +79,8 @@
     transition: max-height 0.2s ease;
     margin: auto;
     max-width: 1120px;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: 16px;
   }
 
   .brands__wrapper--show_more {

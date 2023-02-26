@@ -18,13 +18,13 @@ buttonOpenFeedback.forEach(function (item) {
   item.addEventListener('click', () => {
     feedbackMenu.classList.toggle('modal--show')
     modalBlur.classList.add('tablet-blur--show')
-    if (flipper) {
-      document.body.style.overflow = 'hidden'
-      flipper = !flipper
-    } else {
-      document.body.style.overflow = 'auto'
-      flipper = !flipper
-    }
+    // if (flipper) {
+    //   document.body.style.overflow = 'hidden'
+    //   flipper = !flipper
+    // } else {
+    //   document.body.style.overflow = 'auto'
+    //   flipper = !flipper
+    // }
 
     if (window.innerWidth < 1366) {
       asideMenu.classList.remove('aside_menu--show')
@@ -35,7 +35,7 @@ buttonOpenFeedback.forEach(function (item) {
 buttonCloseFeedback.addEventListener('click', () => {
   feedbackMenu.classList.toggle('modal--show')
   modalBlur.classList.remove('tablet-blur--show')
-  document.body.style.overflow = 'auto'
+  // document.body.style.overflow = 'auto'
 })
 
 buttonOpenCall.forEach(function (item) {
@@ -43,13 +43,13 @@ buttonOpenCall.forEach(function (item) {
   item.addEventListener('click', () => {
     callMenu.classList.toggle('modal--show')
     modalBlur.classList.add('tablet-blur--show')
-    if (flipper) {
-      document.body.style.overflow = 'hidden'
-      flipper = !flipper
-    } else {
-      document.body.style.overflow = 'auto'
-      flipper = !flipper
-    }
+    // if (flipper) {
+    //   document.body.style.overflow = 'hidden'
+    //   flipper = !flipper
+    // } else {
+    //   document.body.style.overflow = 'auto'
+    //   flipper = !flipper
+    // }
 
     if (window.innerWidth < 1366) {
       asideMenu.classList.remove('aside_menu--show')
@@ -60,19 +60,19 @@ buttonOpenCall.forEach(function (item) {
 buttonCloseCall.addEventListener('click', () => {
   callMenu.classList.toggle('modal--show')
   modalBlur.classList.remove('tablet-blur--show')
-  document.body.style.overflow = 'auto'
+  // document.body.style.overflow = 'auto'
 })
 
 buttonOpenMenu.addEventListener('click', () => {
   asideMenu.classList.toggle('aside_menu--show')
   modalBlur.classList.add('tablet-blur--show')
-  document.body.style.overflow = 'hidden'
+  // document.body.style.overflow = 'hidden'
 })
 
 buttonCloseMenu.addEventListener('click', () => {
   asideMenu.classList.toggle('aside_menu--show')
   modalBlur.classList.remove('tablet-blur--show')
-  document.body.style.overflow = 'auto'
+  // document.body.style.overflow = 'auto'
 })
 
 document.addEventListener('click', (evt) => {

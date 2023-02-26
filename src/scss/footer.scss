@@ -1,0 +1,36 @@
+.footer {
+  border: 1px solid #d9fff5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 32px 24px;
+  padding-bottom: 25px;
+
+  &__text {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    color: #7e7e82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    width: 33%;
+    margin: 0;
+  }
+
+  &__text--right {
+    text-align: start;
+  }
+
+  &__text--center {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    &__text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
