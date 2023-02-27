@@ -1,10 +1,11 @@
 .content {
-  min-height: 322px;
+  min-height: 240px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 
 .content__wrapper {
   margin-left: 18px;
@@ -72,6 +73,8 @@
 }
 
 @media screen and (min-width: 767px) {
+  
+
   .content__text {
     letter-spacing: 0.2px;
     width: 312px;
@@ -92,6 +95,10 @@
 }
 
 @media screen and (min-width: 1366px) {
+  .content {
+      margin-bottom: 16px;
+  }
+  
   .content__text {
     width: 490px;
   }

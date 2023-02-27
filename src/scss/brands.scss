@@ -2,7 +2,6 @@
   height: 72px;
   width: 240px;
   background-color: #ffff;
-  margin-left: 32px;
   margin-bottom: 16px;
   display: flex;
   flex-direction: row;
@@ -19,7 +18,8 @@
 
 .brands__header {
   display: block;
-  height: 56px;
+  min-height: 56px;
+  height: auto;
   width: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -65,7 +65,6 @@
     display: none;
   }
   .brands__header {
-    height: 80px;
     margin-bottom: 16px;
   }
 }
@@ -79,9 +78,11 @@
     transition: max-height 0.2s ease;
     margin: auto;
     max-width: 1120px;
-    justify-content: flex-start;
-    margin-left: 16px;
+    justify-content: space-around;
+    padding: 0 24px ;
   }
+
+  
 
   .brands__wrapper--show_more {
     max-height: 1000px;
@@ -92,7 +93,7 @@
 
 @media screen and (min-width: 767px) {
   .brand_card {
-    margin-left: 24px;
+    
     width: 224px;
   }
 
@@ -113,8 +114,11 @@
   }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1025px) {
   .brand_card {
     width: 240px;
+  }
+  .brands__wrapper{
+    padding: 0 32px
   }
 }

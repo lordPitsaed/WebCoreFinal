@@ -20,6 +20,7 @@
 body {
   margin: 0;
   background-color: #f8f8f8;
+  position: relative;
 }
 
 html {
@@ -36,5 +37,17 @@ html {
   body {
     margin-left: 320px;
     width: calc(100% - 320px);
+
   }
+}
+@media screen and (min-width: 426px) {
+  .dummy-box {
+      width: 224px; //426
+    }
+}
+
+@media screen and (min-width: 1024px){
+  .dummy-box {
+      width: 240px;
+    }
 }
