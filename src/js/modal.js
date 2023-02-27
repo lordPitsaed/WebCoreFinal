@@ -14,18 +14,12 @@ let asideMenu = document.querySelector('.aside_menu')
 let modalBlur = document.querySelector('.tablet-blur')
 
 buttonOpenFeedback.forEach(function (item) {
-  let flipper = true
   item.addEventListener('click', () => {
     feedbackMenu.classList.toggle('modal--show')
-    modalBlur.classList.add('tablet-blur--show')
-    // if (flipper) {
-    //   document.body.style.overflow = 'hidden'
-    //   flipper = !flipper
-    // } else {
-    //   document.body.style.overflow = 'auto'
-    //   flipper = !flipper
-    // }
-
+    if (!modalBlur.classList.contains('tablet-blur--show')) {
+      modalBlur.classList.add('tablet-blur--show')
+    }
+    callMenu.classList.remove('modal--show')
     if (window.innerWidth < 1366) {
       asideMenu.classList.remove('aside_menu--show')
     }
@@ -35,22 +29,16 @@ buttonOpenFeedback.forEach(function (item) {
 buttonCloseFeedback.addEventListener('click', () => {
   feedbackMenu.classList.toggle('modal--show')
   modalBlur.classList.remove('tablet-blur--show')
-  // document.body.style.overflow = 'auto'
 })
 
 buttonOpenCall.forEach(function (item) {
   let flipper = true
   item.addEventListener('click', () => {
     callMenu.classList.toggle('modal--show')
-    modalBlur.classList.add('tablet-blur--show')
-    // if (flipper) {
-    //   document.body.style.overflow = 'hidden'
-    //   flipper = !flipper
-    // } else {
-    //   document.body.style.overflow = 'auto'
-    //   flipper = !flipper
-    // }
-
+    feedbackMenu.classList.remove('modal--show')
+    if (!modalBlur.classList.contains('tablet-blur--show')) {
+      modalBlur.classList.add('tablet-blur--show')
+    }
     if (window.innerWidth < 1366) {
       asideMenu.classList.remove('aside_menu--show')
     }
@@ -60,19 +48,16 @@ buttonOpenCall.forEach(function (item) {
 buttonCloseCall.addEventListener('click', () => {
   callMenu.classList.toggle('modal--show')
   modalBlur.classList.remove('tablet-blur--show')
-  // document.body.style.overflow = 'auto'
 })
 
 buttonOpenMenu.addEventListener('click', () => {
   asideMenu.classList.toggle('aside_menu--show')
   modalBlur.classList.add('tablet-blur--show')
-  // document.body.style.overflow = 'hidden'
 })
 
 buttonCloseMenu.addEventListener('click', () => {
   asideMenu.classList.toggle('aside_menu--show')
   modalBlur.classList.remove('tablet-blur--show')
-  // document.body.style.overflow = 'auto'
 })
 
 document.addEventListener('click', (evt) => {
@@ -86,7 +71,6 @@ document.addEventListener('click', (evt) => {
     if (callMenu.classList.contains('modal--show')) {
       callMenu.classList.toggle('modal--show')
     }
-    document.body.style.overflow = 'auto'
     modalBlur.classList.remove('tablet-blur--show')
   }
 })
